@@ -1,0 +1,94 @@
+:root {
+  --primary: #a84fff;
+  --secondary: #d81e5b;
+  --dark: #131a26;
+  --light: #eee;
+  --grey: #888;
+
+  --font: "Fira Sans", sans-serif;
+  --font-quote: "Fira Code", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--light);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.quote {
+  position: relative;
+}
+
+blockquote {
+  font-family: var(--font-quote);
+  max-width: 720px;
+  font-size: 2rem;
+  background-color: var(--dark);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  color: #fff;
+}
+
+.anime,
+.character {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: var(--light);
+  border-radius: 1.5rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.anime {
+  background-color: var(--secondary);
+  font-weight: 400;
+  transform: translate(-25%, 50%);
+}
+
+.character {
+  background-color: var(--primary);
+  font-weight: 700;
+  transform: translate(25%, 50%);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  transition: 0.4s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
